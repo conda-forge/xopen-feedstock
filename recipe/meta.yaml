@@ -10,18 +10,17 @@ source:
   sha256: 79d7e425fb0930b0153eb6beba9a540ca3e07ac254ca828577ad2e8fa24105dc
 
 build:
-  noarch: python
   number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - pip
-    - python >=3.6
+    - python
     - pytest
     - setuptools_scm
   run:
-    - python >=3.6
+    - python
     - isa-l  # [linux]
     - pigz
 
