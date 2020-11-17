@@ -17,7 +17,7 @@ build:
 requirements:
   build:
     - pip
-    - python
+    - python >=3.6
     - pytest
     - setuptools_scm
   run:
