@@ -15,15 +15,14 @@ build:
 
 requirements:
   host:
-    - bz2file   # [py27]
     - pip
     - python
     - pytest
     - setuptools_scm
   run:
-    - bz2file   # [py27]
     - python
     - isa-l  # [linux]
+    - pigz
 
 test:
   imports:
