@@ -21,7 +21,7 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - python-isal  # [linux]
+    - python-isal  # [linux and not pypy]
     - isa-l  # [linux]
     - pigz
 
