@@ -1,5 +1,5 @@
 {% set name = "xopen" %}
-{% set version = "1.0.1" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 79d7e425fb0930b0153eb6beba9a540ca3e07ac254ca828577ad2e8fa24105dc
+  sha256: 38277eb96313b2e8822e19e793791801a1f41bf13ee5b48616a97afc65e9adb3
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -21,6 +21,7 @@ requirements:
     - setuptools_scm
   run:
     - python
+    - python-isal  # [linux and not (python_impl == 'pypy')]
     - isa-l  # [linux]
     - pigz
 
