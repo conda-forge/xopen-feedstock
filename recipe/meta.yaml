@@ -10,7 +10,7 @@ source:
   sha256: 38277eb96313b2e8822e19e793791801a1f41bf13ee5b48616a97afc65e9adb3
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -21,8 +21,8 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - python-isal  # [linux and not (python_impl == 'pypy')]
-    - isa-l  # [linux]
+    - python-isal  # [unix and python_impl != 'pypy']
+    - isa-l  # [unix]
     - pigz
 
 test:
@@ -30,13 +30,13 @@ test:
     - xopen
 
 about:
-  home: https://github.com/marcelm/xopen/
+  home: https://github.com/pycompression/xopen/
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: Open compressed files transparently in Python
-  doc_url: https://github.com/marcelm/xopen/
-  dev_url: https://github.com/marcelm/xopen/
+  doc_url: https://github.com/pycompression/xopen/
+  dev_url: https://github.com/pycompression/xopen/
 
 extra:
   recipe-maintainers:
