@@ -30,13 +30,13 @@ test:
     - xopen
 
 about:
-  home: https://github.com/marcelm/xopen/
+  home: https://github.com/pycompression/xopen/
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: Open compressed files transparently in Python
-  doc_url: https://github.com/marcelm/xopen/
-  dev_url: https://github.com/marcelm/xopen/
+  doc_url: https://github.com/pycompression/xopen/
+  dev_url: https://github.com/pycompression/xopen/
 
 extra:
   recipe-maintainers:
