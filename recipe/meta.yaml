@@ -21,7 +21,9 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - python-isal  # [unix and python_impl != 'pypy']
+    - python-isal  # [python_impl != 'pypy']
+    # Python-isal only has been build for pypy3.7 as of this moment.
+    - python-isal  # [python_impl == 'pypy' and py>=37]
     - isa-l  # [unix]
     - pigz
 
