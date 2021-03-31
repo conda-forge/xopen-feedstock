@@ -23,7 +23,7 @@ requirements:
     - python
     - python-isal  # [python_impl != 'pypy']
     # Python-isal only has been build for pypy3.7 as of this moment.
-    - python-isal  # [python_impl == 'pypy' and py>=37]
+    - python-isal  # [python_impl == 'pypy' and py>=37 and linux]
     - isa-l  # [unix]
     - pigz
 
