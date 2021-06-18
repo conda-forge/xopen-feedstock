@@ -10,7 +10,7 @@ source:
   sha256: 38277eb96313b2e8822e19e793791801a1f41bf13ee5b48616a97afc65e9adb3
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -24,7 +24,7 @@ requirements:
     - python-isal  # [python_impl != 'pypy']
     # Python-isal only has been build for pypy3.7 as of this moment.
     - python-isal  # [python_impl == 'pypy' and py>=37 and linux]
-    - isa-l  # [unix]
+    - isa-l >=2.30 # [unix]
     - pigz
 
 test:
