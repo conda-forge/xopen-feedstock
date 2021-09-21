@@ -26,7 +26,7 @@ requirements:
     - python-isal  # [python_impl == 'pypy' and py>=37 and linux]
     - isa-l >=2.30  # [unix]
     - pigz
-    - pbzip2
+    - pbzip2  # [unix]
 
 test:
   imports:
