@@ -1,5 +1,5 @@
 {% set name = "xopen" %}
-{% set version = "1.5.0" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 822b926afd39b6904e5d2fdee6e0944d342023f2a42339103c1507b0da48c693
+  sha256: 72219a4d690e9c90ad445c45d2119ae2a6d5d38912255631e227aceac6294353
 
 build:
   number: 0
@@ -21,9 +21,9 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - python-isal  # [python_impl != 'pypy']
-    # Python-isal only has been build for pypy3.7 as of this moment.
-    - python-isal  # [python_impl == 'pypy' and py>=37 and linux]
+    - python-isal >=1.0.1  # [python_impl != 'pypy']
+    # python-isal only has been build for pypy3.7 as of this moment.
+    - python-isal >=1.0.1  # [python_impl == 'pypy' and py>=37 and linux]
     - isa-l >=2.30  # [unix]
     - pigz
     - pbzip2  # [unix]
