@@ -1,5 +1,5 @@
 {% set name = "xopen" %}
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 72219a4d690e9c90ad445c45d2119ae2a6d5d38912255631e227aceac6294353
+  sha256: 901f9c8298e95ed74767a4bd76d9f4cf71d8de27b8cf296ac3e7bc1c11520d9f
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -27,6 +27,8 @@ requirements:
     - isa-l >=2.30  # [unix]
     - pigz
     - pbzip2  # [unix]
+    - zstandard
+    - zstd
 
 test:
   imports:
