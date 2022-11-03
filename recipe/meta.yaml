@@ -28,6 +28,7 @@ requirements:
     - pigz
     - pbzip2  # [unix]
     - zstandard
+    - zstd
 
 test:
   imports:
