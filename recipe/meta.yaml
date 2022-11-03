@@ -27,6 +27,7 @@ requirements:
     - isa-l >=2.30  # [unix]
     - pigz
     - pbzip2  # [unix]
+    - zstandard
 
 test:
   imports:
