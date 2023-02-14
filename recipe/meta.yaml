@@ -10,7 +10,7 @@ source:
   sha256: 901f9c8298e95ed74767a4bd76d9f4cf71d8de27b8cf296ac3e7bc1c11520d9f
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -21,10 +21,8 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - python-isal >=1.0.1  # [python_impl != 'pypy']
-    # python-isal only has been build for pypy3.7 as of this moment.
-    - python-isal >=1.0.1  # [python_impl == 'pypy' and py>=37 and linux]
-    - isa-l >=2.30  # [unix]
+    - python-isal >=1.0.1  # [x86_64 or aarch64]
+    - isa-l >=2.30  # [unix and (x86_64 or aarch64)]
     - pigz
     - pbzip2  # [unix]
     - zstandard
