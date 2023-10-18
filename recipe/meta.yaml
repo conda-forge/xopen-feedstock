@@ -21,7 +21,7 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - python-isal >=1.0.1  # [x86_64 or aarch64]
+    - python-isal >=1.4.1  # [x86_64 or aarch64]
     - isa-l >=2.30  # [unix and (x86_64 or aarch64)]
     - pigz
     - pbzip2  # [unix]
