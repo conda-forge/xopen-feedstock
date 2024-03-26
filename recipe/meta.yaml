@@ -22,7 +22,7 @@ requirements:
   run:
     - python
     - python-isal >=1.6.1  # [x86_64 or aarch64]
-    - python-zlib-ng >=0.4.1  # [x86_64 or aarch64]
+    - python-zlib-ng >=0.4.1  # [x86_64]
     - pigz
     - pbzip2  # [unix]
     - zstandard
