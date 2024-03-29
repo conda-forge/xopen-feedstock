@@ -1,5 +1,5 @@
 {% set name = "xopen" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 201b30809144235582c092910fda531ec156cb7469905b00cbdd64e5282191e3
+  sha256: 6c34127651e538cfdd67ec8016a6505ba386158bbfe3f615e105d49027d5968e
 
 build:
   number: 0
