@@ -24,7 +24,7 @@ requirements:
   run:
     - python
     - python-isal >=1.6.1  # [not arm64]
-    - python-zlib-ng >=0.4.1  # [not aarch64]
+    - python-zlib-ng >=0.4.1  # [(not linux) or linux64]
     - pigz
     - pbzip2  # [not win]
     - zstandard
