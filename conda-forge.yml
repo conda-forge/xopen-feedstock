@@ -1,3 +1,5 @@
+azure:
+  store_build_artifacts: true
 conda_build:
   pkg_format: '2'
   error_overlinking: true
