@@ -17,7 +17,6 @@ requirements:
   build:
     - python  # [arm64]
     - cross-python_{{ target_platform }}  # [arm64]
-    - setuptools_scm  # [arm64]
   host:
     - pip
     - python
@@ -25,7 +24,7 @@ requirements:
   run:
     - python
     - python-isal >=1.6.1  # [not arm64]
-    - python-zlib-ng >=0.4.1
+    - python-zlib-ng >=0.4.1  # [not aarch64]
     - pigz
     - pbzip2  # [not win]
     - zstandard
