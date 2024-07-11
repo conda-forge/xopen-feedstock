@@ -1,5 +1,5 @@
 {% set name = "xopen" %}
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6c34127651e538cfdd67ec8016a6505ba386158bbfe3f615e105d49027d5968e
+  sha256: f19d83de470f5a81725df0140180ec71d198311a1d7dad48f5467b4ad5df6154
 
 build:
   number: 0
@@ -21,10 +21,10 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - python-isal >=1.6.1  # [x86_64 or aarch64]
-    - python-zlib-ng >=0.4.1  # [x86_64]
+    - python-isal >=1.6.1  # [not arm64]
+    - python-zlib-ng >=0.4.1
     - pigz
-    - pbzip2  # [unix]
+    - pbzip2
     - zstandard
     - zstd
 
@@ -43,5 +43,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - corneliusroemer
     - marcelm
     - rhpvorderman
