@@ -17,10 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.9
     - setuptools_scm
   run:
-    - python
+    - python >=3.9
     - python-isal >=1.6.1
     - python-zlib-ng >=0.4.1
     - pigz
