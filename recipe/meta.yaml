@@ -10,25 +10,25 @@ source:
   sha256: f19d83de470f5a81725df0140180ec71d198311a1d7dad48f5467b4ad5df6154
 
 build:
-  number: 0
+  number: 1
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python  # [arm64]
-    - cross-python_{{ target_platform }}  # [arm64]
   host:
     - pip
     - python
     - setuptools_scm
   run:
     - python
-    - python-isal >=1.6.1  # [not arm64]
-    - python-zlib-ng >=0.4.1  # [(not linux) or linux64]
+    - python-isal >=1.6.1
+    - python-zlib-ng >=0.4.1
     - pigz
     - pbzip2  # [not win]
     - zstandard
     - zstd
+    - __unix   # [unix]
+    - __win    # [win]
 
 test:
   imports:
