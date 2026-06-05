@@ -1,5 +1,5 @@
 {% set name = "xopen" %}
-{% set version = "2.0.2" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f19d83de470f5a81725df0140180ec71d198311a1d7dad48f5467b4ad5df6154
+  sha256: 06584821588f813563863b63d5e02568a4328661b7507ea38c432f24c69ea4b7
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -18,14 +18,15 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools_scm
+    - setuptools
+    - setuptools-scm
   run:
     - python >={{ python_min }}
     - python-isal >=1.6.1
     - python-zlib-ng >=0.4.1
     - pigz
     - pbzip2  # [not win]
-    - zstandard
+    - backports.zstd
     - zstd
     - __unix   # [unix]
     - __win    # [win]
