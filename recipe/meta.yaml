@@ -18,14 +18,15 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools_scm
+    - setuptools
+    - setuptools-scm
   run:
     - python >={{ python_min }}
     - python-isal >=1.6.1
     - python-zlib-ng >=0.4.1
     - pigz
     - pbzip2  # [not win]
-    - zstandard
+    - backports.zstd  # [py < 314]
     - zstd
     - __unix   # [unix]
     - __win    # [win]
